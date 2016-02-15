@@ -23,6 +23,7 @@ The above merging operations give a final dataset for Task 1 of the assignment w
 
 ###showstats.R
 The "showstats" R script will take the output from the mergedata function and perform the following operations:
+
 1.  A new data frame is created, showing the subject number and the activity for each row in the merged data set.
 2.  The merged data set is then subsetted for any columns containing "mean" measurements and these columns are added to the data frame created in the previous step
 3.  The merged data set is then subsetted for any columns contains "std" deviation measurements and these columns are added to the data frame from the previous step.
@@ -34,6 +35,7 @@ These operations give a new, subsetted data set that satisfies the requirements 
 
 ###addactivities.R
 The "addactivities" R script will add the descriptive activities from the dataset to each required row in the given dataset. This will work for either the full dataset, mergeddata, or the statistical dataset, statsdata.
+
 1.  The activities data file is read in to the environment in order to show the key:value pairs applicable.
 2.  The given dataset is appended with the value of the activity description as applicable.
 
@@ -44,6 +46,7 @@ This operation gives a slightly extended data set to what was given as an input,
 ###relabel.R
 This function will relabel the columns in the full data set to give them more descriptive names for each variable.
 Please note that the variable names for the dataset are already unique, as done in the mergedata.R script.
+
 1.  Variable names containing time domain data, indicated by the "t" character, are changed to include the "td" notation to show that they are in the time domain
 2.  Variable names containing the frequency domain data, indicated by the "f" character, are changed to include the "fd" notation to show that they are in the frequency domain
 3.  All variable names are changed to lower case.
@@ -55,6 +58,8 @@ This operation will return the given data with more relevant data variable names
 
 ###tidydata.R
 This script will find the mean of each variable per subject number and activity and will create a new data set showing only this data. This new data set will then be tidied according to tidy data rules
+
 1.  The merged data frame is subset by subject number and activity type and a new set is created with the averaged values of all the measurements
 2.  The new data frame is tidied up by combining columns to ensure that only a single variable is included in each row.
+
 This operation will complete the requirements for Assignment Task 5 and the assignment in itself.
