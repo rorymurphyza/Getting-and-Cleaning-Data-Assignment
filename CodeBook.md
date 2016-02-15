@@ -8,13 +8,13 @@ Describe the structure of the data and what each variable means, what format the
 ##Scripts
 ###mergedata.R
 The "mergedata()" R function will created the merged data set as read from the input file. The following steps are taken in order to create the merged data file:
-1.  The training data is read from the file and saved in to the R environment. 
-2.  The "y_train"" data is read in and combined with the training data file using the "bind_cols"" function as this data shows the activities that pertain to each row of training data.
-3.  The "subject_test" file is read in and also combined with the training data using the "bind_cols" function as this data shows which subject generated the data shown in each row.
-4.  The "features" data is read from the file and used to name the columns of the full data set to allow for an understanding of what each column of data means.
-5. The above process is completed for the "test" data in order to create a similar, if different length, data frame.
-6. The training data frame and the test data frame are combined using the "rbind" function is order to merge the two data sets.
-7. Finally the data is the run through a transposition and cbind function that takes values in duplicate columns and sums them. This is the first part of tidying the data for analysis
+1	The training data is read from the file and saved in to the R environment. 
+2	The "y_train"" data is read in and combined with the training data file using the "bind_cols"" function as this data shows the activities that pertain to each row of training data.
+3	The "subject_test" file is read in and also combined with the training data using the "bind_cols" function as this data shows which subject generated the data shown in each row.
+4	The "features" data is read from the file and used to name the columns of the full data set to allow for an understanding of what each column of data means.
+5	The above process is completed for the "test" data in order to create a similar, if different length, data frame.
+6	The training data frame and the test data frame are combined using the "rbind" function is order to merge the two data sets.
+7	Finally the data is the run through a transposition and cbind function that takes values in duplicate columns and sums them. This is the first part of tidying the data for analysis
 
 The above merging operations give a final dataset for Task 1 of the assignment where we have the training and test datasets merged with the activity and subject lists as well as eachother. This results in a data frame of 10299 obervations of 563 variables which can be used for further analysis.
 
