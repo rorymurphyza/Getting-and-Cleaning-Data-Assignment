@@ -17,9 +17,9 @@ run_analysis <- function()
   
   #Add the descriptive activities name to the dataset provided.
   #The dataset could be either the full dataset or the subsetted dataset from "showstats"
-  #In this case, we will use the full dataset
+  #In this case, we will use the statsdata dataset
   source("addactivities.R")
-  mergeddata <- addactivities(mergeddata, datalocation)
+  mergeddata <- addactivities(statsdata, datalocation)
   
   #Give the data variables more descriptive names
   source("rename.R")
