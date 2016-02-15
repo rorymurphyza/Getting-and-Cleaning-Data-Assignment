@@ -28,5 +28,5 @@ run_analysis <- function()
   #Tidy the data set according to tidy data rules.
   #The average of every variable for each activity is returned by the function
   source("tidydata.R")
-  tidy <- tidydata(mergeddata)
+  tidy <- tidydata(mergeddata, savetofile = TRUE)
 }

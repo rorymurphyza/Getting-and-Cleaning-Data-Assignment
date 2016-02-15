@@ -1,4 +1,4 @@
-tidydata <- function(m, savetofile)
+tidydata <- function(m, savetofile = FALSE)
 {
   #This function takes in the renamed mergeddata set and finds the average of each variable for each subject and each activity
   #This will then be tidied according to the tidy data rules and returned
@@ -36,7 +36,7 @@ tidydata <- function(m, savetofile)
   avedata$gravity <- gsub(",gravity", "", avedata$gravity)
   
   if(savetofile)
-    write.csv(m, file="tidydata.csv")
+    write.table(m, file="tidydata.csv", row.name = FALSE)
   else
     return(m)
 }
