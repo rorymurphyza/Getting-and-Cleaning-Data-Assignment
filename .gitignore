@@ -47,3 +47,4 @@ Temporary Items
 .apdisk
 *.txt
 data/UCI HAR Dataset/train/y_train.txt
+*.csv
